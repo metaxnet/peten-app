@@ -1,0 +1,36 @@
+<!doctype html> 
+<html lang="en"> 
+<head> 
+	<meta charset="UTF-8" />
+	<title>פתן</title>
+    <style type="text/css">
+        body {
+            margin: 0;
+            margin: 100px;
+            direction: rtl;
+        }
+        .rtl-text {
+            direction: rtl;
+        }
+        .ltr-text {
+            direction: ltr;
+        }
+    </style>
+</head>
+<body>
+<h1>פתן</h1>
+<form  action="/" method="post">
+<table><tr><td>
+{% csrf_token %}
+<textarea id="petenText" class="rtl-text" cols="70" rows ="25" name="petenText">
+{{ peten_text }}
+</textarea> 
+</form>
+</td><td>
+<textarea id="pythonText" class="ltr-text" cols="70" rows ="25" name="pythonText">
+{{ python_text }}
+</textarea> 
+</td></tr></table>
+<input type="submit" action="submit" />
+</body>
+</html>
