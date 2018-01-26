@@ -23,7 +23,7 @@ class Commander:
         self.debug_mode = debug_mode
         self.app = app_object
         self.dictionary_files = []
-        self.translations_file = "/home/lifman/metaxnet/Peten/translations.txt"
+        self.translations_file = "./translations.txt"
         self.reset()
         # For an interactive shell...
         #self.py = subprocess.Popen([EXECUTABLE], stdin=subprocess.PIPE)
