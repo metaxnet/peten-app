@@ -16,21 +16,35 @@
             direction: ltr;
         }
     </style>
+    <script>        
+    function convertCode(){
+        document.getElementById("submitMode").value="convert";
+        document.getElementById("myForm").submit(); 
+    }
+    function executeCode(){
+        document.getElementById("submitMode").value="execute";
+        document.getElementById("myForm").submit(); 
+    }
+    </script>
 </head>
 <body>
 <h1>פתן</h1>
-<form  action="/" method="post">
-<table><tr><td>
-{% csrf_token %}
-<textarea id="petenText" class="rtl-text" cols="70" rows ="25" name="petenText">
-{{ peten_text }}
-</textarea> 
+<form  id="myForm" action="/" method="post">
+<table width="100%"><tr>
+<td width="50%">
+    {% csrf_token %}
+    <textarea id="petenText" class="rtl-text" rows ="25" cols="70" name="petenText">
+    {{ peten_text }}
+    </textarea> 
+<td width="50%"><textarea id="pythonText" class="ltr-text" rows ="25" cols="70" name="pythonText">
+    {{ python_text }}
+    </textarea></td>
+</tr><tr>
+    <td width="100%" colspan="2"><textarea id="pythonText" class="rtl-text"  cols="145" rows ="5" name="outputText">{{ output_text }}</textarea></td>
+</tr></table>
+<div class="convert" onClick="convertCode();">לעבד</div>
+<div class="execute" onClick="executeCode();">להריץ</div>
+<textarea id="submitMode" name="submitMode" cols="10" rows="1">{{ submit_mode }}</textarea>
 </form>
-</td><td>
-<textarea id="pythonText" class="ltr-text" cols="70" rows ="25" name="pythonText">
-{{ python_text }}
-</textarea> 
-</td></tr></table>
-<input type="submit" action="submit" />
 </body>
 </html>

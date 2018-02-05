@@ -217,8 +217,8 @@ class Commander:
 
 def process_and_run_no_GUI(filename, debug_mode=False, run_mode=True):
     commander = Commander(None, debug_mode)        
-    text = open(filename, "r").read()
     try:
+        text = open(filename, "r").read()
         if "### PETEN TRANSLATION COMMENTS ###" in text:
             translations_text = text[text.index("### PETEN TRANSLATION COMMENTS ###"):]
             print("TRANSLATIONS:", translations_text)
@@ -227,6 +227,7 @@ def process_and_run_no_GUI(filename, debug_mode=False, run_mode=True):
         commander.update_translations_from_comments(translations_text)
         translation_comments = translations_text.split(NEWLINE)
     except:
+        text = open(filename, "rb").read()
         text = text.decode("utf8")
         text = "".join([COMMENTS_BEGIN] + [DUMMY_COMMENT] + [COMMENTS_END])
         f = open(filename+".translations", "wb")#

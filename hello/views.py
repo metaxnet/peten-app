@@ -22,22 +22,32 @@ STARTING_TEXT="""
 # ברכה = greeting
 """
 
+#import cmd
+import subprocess
+
 def peten(request):
     if request.method == "POST":
-         peten_text = request.POST["petenText"]
-         #python_text = PETEN.process(peten_text)
+         logging.info(request.POST)
+         logging.info(request.POST.keys())
+         peten_text =  request.POST["petenText"]
+         submit_mode = request.POST["submitMode"]
+         #output_text = "OUTPUT"
          peten_filename = "./my_code.peten"
          f = open(peten_filename, "w")
          f.write(peten_text)
          f.close()
          python_filename = peten_commander.process_and_run_no_GUI(peten_filename, debug_mode=True, run_mode=False)
          python_text = open(python_filename).read()
-         #logging.info(peten_text)
-         #logging.info(python_text)
-         context = {"python_text": python_text, "peten_text": peten_text}
+         if submit_mode == "execute":
+             process = subprocess.Popen(['python', python_filename], stdout=subprocess.PIPE)
+             output_text, error_text = process.communicate()
+             output_text = output_text.decode("utf8")
+         else:
+             output_text = "!"
+         context = {"python_text": python_text, "peten_text": peten_text, "output_text": output_text, "submit_mode": submit_mode}        
          return render(request, 'peten.html', context)
     else:
-        context = {"peten_text": STARTING_TEXT, "python_text": ""}
+        context = {"peten_text": STARTING_TEXT, "python_text": "", "output_text": "", "submit_mode": ""}
         return render(request, 'peten.html', context)
 
 # Create your views here.
