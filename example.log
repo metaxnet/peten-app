@@ -1,0 +1,86 @@
+DEBUG:root:This message should go to the log file
+INFO:root:So should this
+WARNING:root:And this, too
+WARNING:django.request:Not Found: /favicon.ico
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['7dVsr5Rf69UeP20Kz0QbZhlXz9Jd6I8XeEixI6au1jreQE1wT7qbZC4fyW0jeZWT'], 'pythonText': ['    \r\n    '], 'petenText': ['    \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    '], 'submitMode': ['convert']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['fwxqXgtmuR5QvLH4jsBQdJA8FGVyUUP4mXUvehMBp1CQwnIQDzbQd4jqEtcE2bD0'], 'pythonText': ['    # coding=UTF-8\r\n    \r\ngreeting="שלום, עולם!"\r\nprint(greeting)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'petenText': ['        \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'submitMode': ['execute']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['fwxqXgtmuR5QvLH4jsBQdJA8FGVyUUP4mXUvehMBp1CQwnIQDzbQd4jqEtcE2bD0'], 'pythonText': ['    # coding=UTF-8\r\n    \r\ngreeting="שלום, עולם!"\r\nprint(greeting)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'petenText': ['        \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'submitMode': ['execute']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['uFV6iQ20Tmbp09udfyFZqyopSvMB374xB6ibzRlfOwIp1LvZzFfZqT7HRi3HboSt'], 'pythonText': ['    \r\n    '], 'petenText': ['    \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    '], 'submitMode': ['convert']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['ujzv6uA7RAMrjcDqH3KW4rnvlWLBze4eBKWAnvTmMKjrkOEc1akW4M6NkJ2HHvSa'], 'pythonText': ['    # coding=UTF-8\r\n    \r\ngreeting="שלום, עולם!"\r\nprint(greeting)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'petenText': ['        \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'submitMode': ['execute']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['Rn6ujxGMRwelNsehErlNyqjCAtGRAwZdYOtzAyZ1MGLlO4f3YyVNyL2UzgXXINN9'], 'pythonText': ['    \r\n    '], 'petenText': ['    \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    ']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText'])
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'submitMode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/lifman/heroku-peten/hello/views.py", line 33, in peten
+    submit_mode = request.POST["submitMode"]
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'submitMode'
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['Rn6ujxGMRwelNsehErlNyqjCAtGRAwZdYOtzAyZ1MGLlO4f3YyVNyL2UzgXXINN9'], 'pythonText': ['    \r\n    '], 'petenText': ['    \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    ']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText'])
+ERROR:django.request:Internal Server Error: /
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/datastructures.py", line 77, in __getitem__
+    list_ = super().__getitem__(key)
+KeyError: 'submitMode'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/exception.py", line 35, in inner
+    response = get_response(request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 128, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/usr/local/lib/python3.5/dist-packages/django/core/handlers/base.py", line 126, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/lifman/heroku-peten/hello/views.py", line 33, in peten
+    submit_mode = request.POST["submitMode"]
+  File "/usr/local/lib/python3.5/dist-packages/django/utils/datastructures.py", line 79, in __getitem__
+    raise MultiValueDictKeyError(key)
+django.utils.datastructures.MultiValueDictKeyError: 'submitMode'
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['58GTUrLqnGs1qyY66e6vVD7LvVrDEr1wcz3Ybs4FiQZ1raZSqlGvVYQ3uIIJMIPs'], 'pythonText': ['    \r\n    '], 'petenText': ['    \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    '], 'submitMode': ['convert']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['1W8kJWijaC55YwRiUqHAKmdweS4g9Ll88nvp0XBy5MC5Z8S4exhAKHWOdFlmh294'], 'pythonText': ['    # coding=UTF-8\r\n    \r\ngreeting="שלום, עולם!"\r\nprint(greeting)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'petenText': ['        \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'submitMode': ['execute']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['K6yas9CRaDFdaCUiSa4etVPs4CpT8sIGRxVfJaV65NcdbeV4chEetgyK3pGZgJwC'], 'pythonText': ['    \r\n    '], 'petenText': ['    \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    '], 'submitMode': ['convert']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['QaqvuTfgQls9aid3yinN5nj9dhl9vH22XBNALUyvLvZ9bUePSpXN5I2rc4CfDYQY'], 'pythonText': ['    # coding=UTF-8\r\n    \r\ngreeting="שלום, עולם!"\r\nprint(greeting)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'petenText': ['        \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'submitMode': ['execute']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['zHfqHzuFSRH6xEZyWWQYZHHLufHlBWVtG8CvYANUN1e6yg0kg3qYZ2q3t2YrJdJp'], 'pythonText': ['    # coding=UTF-8\r\n        \r\ngreeting="שלום, עולם!"\r\nprint(greeting)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    \r\n    '], 'petenText': ['            \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    \r\n    '], 'submitMode': ['convert']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['PZYWcdhpuXF07TGAGn4BwXkyvzV4OBmJWql1teAEp7c08vHm0uEBwi3QumcaWSaF'], 'pythonText': ['    # coding=UTF-8\r\n            \r\ngreeting="שלום, עולם!"\r\nprint(greeting)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    \r\n    \r\n    '], 'petenText': ['                \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    \r\n    \r\n    '], 'submitMode': ['execute']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['VGUPkA53BA13Mf7tQ5YQt6Bs4hcrnecD27hUBBoiwKy3NR8facyQtrkK34txvv0z'], 'pythonText': ['    \r\n    '], 'petenText': ['    \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    '], 'submitMode': ['convert']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['fowgTz7PpizBrKWXjKGai8wC7OZuAKO8mPTlaAq4ks6BsmXJDRgaitfU6BgAI1C4'], 'pythonText': ['    # coding=UTF-8\r\n    \r\ngreeting="שלום, עולם!"\r\nprint(greeting)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'petenText': ['        \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'submitMode': ['execute']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['gYPVhNsF00lDIueqOct9zNwdrF5OL1l5npc0yOLUVaSDJ6fc8j39z8fvqsmUTi91'], 'pythonText': ['    \r\n    '], 'petenText': ['    \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    '], 'submitMode': ['convert']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['kmMvbkl4yA3rnNEEzItCF6V24jFz7n3frN9AslEjtKAropFqTP3CFrEk36WFfERb'], 'pythonText': ['    # coding=UTF-8\r\n    \r\ngreeting="שלום, עולם!"\r\nprint(greeting)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'petenText': ['        \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'submitMode': ['execute']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['NcQXd9fHrswt6MXku6pvRzRR2AUWlBoWUDd2uayWmC3t7oY6OdZvRUA91nb2tScS'], 'pythonText': ['    \r\n    '], 'petenText': ['    \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    '], 'submitMode': ['convert']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['pkObBjEvcyzSul9EH6u3WZexObneQaUZwLbgSkXK7I6SvXaq1d43WkXPNYEkYrIV'], 'pythonText': ['    # coding=UTF-8\r\n    \r\ngreeting="שלום, עולם!"\r\nprint(greeting)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'petenText': ['        \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'submitMode': ['execute']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['LTSoA3rmR4jievRwGUvdce4A8H5i9XyYSkftR4KBMeQif7Si015dczNS7umohemU'], 'pythonText': ['    \r\n    '], 'petenText': ['    \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    '], 'submitMode': ['convert']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['ZuJvWTHzUeSxUd7NlRlFr6p3MgIVFFVa6V6AdU0OPopxVP8zFYVFrr8lL3Z1NWJ6'], 'pythonText': ['    # coding=UTF-8\r\n    \r\ngreeting="שלום, עולם!"\r\nprint(greeting)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'petenText': ['        \r\nברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n\r\n    \r\n    '], 'submitMode': ['execute']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'pythonText', 'petenText', 'submitMode'])

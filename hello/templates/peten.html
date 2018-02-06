@@ -4,17 +4,24 @@
 	<meta charset="UTF-8" />
 	<title>פתן</title>
     <style type="text/css">
+        textarea { border: none; }
         body {
             margin: 0;
             margin: 100px;
             direction: rtl;
         }
-        .rtl-text {
-            direction: rtl;
+        .rtl-text { direction: rtl; }
+        .ltr-text { direction: ltr; }
+        .peten-area { 
+            background-color: #eeffee;
         }
-        .ltr-text {
-            direction: ltr;
+        .python-area { 
+            background-color: #ffeeee;
         }
+        .output-area { 
+            background-color: #eeeeff;
+        }
+        .hide { display: none; }
     </style>
     <script>        
     function convertCode(){
@@ -31,20 +38,23 @@
 <h1>פתן</h1>
 <form  id="myForm" action="/" method="post">
 <table width="100%"><tr>
-<td width="50%">
+<td width="50%" class="peten-area">
     {% csrf_token %}
-    <textarea id="petenText" class="rtl-text" rows ="25" cols="70" name="petenText">
+    <textarea id="petenText" class="rtl-text peten-area" rows ="25" cols="70" name="petenText">
     {{ peten_text }}
     </textarea> 
-<td width="50%"><textarea id="pythonText" class="ltr-text" rows ="25" cols="70" name="pythonText">
+<td width="50%" class="python-area"><textarea id="pythonText" class="ltr-text python-area" rows ="25" cols="70" name="pythonText">
     {{ python_text }}
     </textarea></td>
 </tr><tr>
-    <td width="100%" colspan="2"><textarea id="pythonText" class="rtl-text"  cols="145" rows ="5" name="outputText">{{ output_text }}</textarea></td>
+    <td width="100%" colspan="2" class="output-area">
+    <!--textarea id="pythonText" class="rtl-text"  cols="145" rows ="5" name="outputText"-->
+{{ output_text }}
+    <!--/textarea></td-->
 </tr></table>
 <div class="convert" onClick="convertCode();">לעבד</div>
 <div class="execute" onClick="executeCode();">להריץ</div>
-<textarea id="submitMode" name="submitMode" cols="10" rows="1">{{ submit_mode }}</textarea>
+<textarea id="submitMode" name="submitMode" cols="1" rows="1" class="hide">{{ submit_mode }}</textarea>
 </form>
 </body>
 </html>
