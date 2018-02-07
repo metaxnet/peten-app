@@ -36,22 +36,12 @@
 </head>
 <body>
 <h1>פתן</h1>
-<form  id="myForm" action="/" method="post">
+<form  id="myForm" action="/" method="post">{% csrf_token %}
 <table width="100%"><tr>
 <td width="50%" class="peten-area">
-    {% csrf_token %}
-    <textarea id="petenText" class="rtl-text peten-area" rows ="25" cols="70" name="petenText">
-    {{ peten_text }}
-    </textarea> 
-<td width="50%" class="python-area"><textarea id="pythonText" class="ltr-text python-area" rows ="25" cols="70" name="pythonText">
-    {{ python_text }}
-    </textarea></td>
-</tr><tr>
-    <td width="100%" colspan="2" class="output-area">
-    <!--textarea id="pythonText" class="rtl-text"  cols="145" rows ="5" name="outputText"-->
-{{ output_text }}
-    <!--/textarea></td-->
-</tr></table>
+<textarea id="petenText" class="rtl-text peten-area" rows ="25" cols="70" name="petenText">{{ peten_text }}</textarea> 
+<td width="50%" class="python-area"><textarea id="pythonText" class="ltr-text python-area" rows ="25" cols="70" name="pythonText">{{ python_text }}</textarea></td>
+</tr><tr><td width="100%" colspan="2" class="output-area">{{ output_text }}</tr></table>
 <div class="convert" onClick="convertCode();">לעבד</div>
 <div class="execute" onClick="executeCode();">להריץ</div>
 <textarea id="submitMode" name="submitMode" cols="1" rows="1" class="hide">{{ submit_mode }}</textarea>
