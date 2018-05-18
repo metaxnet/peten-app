@@ -25,7 +25,7 @@ STARTING_TEXT="""
 #import cmd
 import subprocess
 
-def peten(request):
+def peten_real(request):
     if request.method == "POST":
          logging.info(request.POST)
          logging.info(request.POST.keys())
@@ -39,15 +39,37 @@ def peten(request):
          python_filename = peten_commander.process_and_run_no_GUI(peten_filename, debug_mode=True, run_mode=False)
          python_text = open(python_filename).read()
          if submit_mode == "execute":
-             process = subprocess.Popen(['python', python_filename], stdout=subprocess.PIPE)
+             logging.info("Execute1")
+             process = subprocess.Popen(['python', python_filename], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+             logging.info("Execute2")
              output_text, error_text = process.communicate()
-             output_text = output_text.decode("utf8")
+             logging.info("Execute3")
+             if error_text != bytes():
+                 logging.info("ERR:"+error_text.decode("utf8"))
+                 output_text = error_text.decode("utf8")
+             else:
+                 logging.info("OUT:"+output_text.decode("utf8"))
+                 output_text = output_text.decode("utf8")
          else:
-             output_text = "!"
+             output_text = "!!"
          context = {"python_text": python_text, "peten_text": peten_text, "output_text": output_text, "submit_mode": submit_mode}        
          return render(request, 'peten.html', context)
     else:
         context = {"peten_text": STARTING_TEXT, "python_text": "", "output_text": "", "submit_mode": ""}
+        return render(request, 'peten.html', context)
+
+def peten(request):
+    if request.method == "POST":
+         logging.info(request.POST)
+         logging.info(request.POST.keys())
+         peten_text =  request.POST["petenText"]
+         python_text = peten_text.replace("\\","/")
+         output_text = ""
+         submit_mode = ""
+         context = {"python_text": python_text, "peten_text": peten_text, "output_text": output_text, "submit_mode": submit_mode}        
+         return render(request, 'peten.html', context)
+    else:
+        context = {"peten_text": "", "python_text": "", "output_text": "", "submit_mode": ""}
         return render(request, 'peten.html', context)
 
 # Create your views here.

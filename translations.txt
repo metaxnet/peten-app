@@ -41,6 +41,7 @@ return = להחזיר
 self = עצמי
 set = כסט
 str = כמחרוזת
+sum = לסכום
 try = לנסות
 while = כל_עוד
 with = עם

@@ -12,5 +12,7 @@ import hello.views
 
 urlpatterns = [
     url(r'^/?$',       hello.views.peten, name='peten'),
-    url(r'^/peten/?$', hello.views.peten, name='peten'),
+    url(r'^/?peten/?$', hello.views.peten, name='peten'),
+    url(r'^/?real/?$', hello.views.peten_real, name='peten'),
+    url(r'^/?peten/real/?$', hello.views.peten_real, name='peten'),
 ]
