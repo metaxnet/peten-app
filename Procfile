@@ -1,1 +1,1 @@
-web: gunicorn heroku-peten.wsgi
+web: gunicorn

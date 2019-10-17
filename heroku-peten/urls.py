@@ -15,4 +15,5 @@ urlpatterns = [
     url(r'^/?peten/?$', hello.views.peten, name='peten'),
     url(r'^/?real/?$', hello.views.peten_real, name='peten'),
     url(r'^/?peten/real/?$', hello.views.peten_real, name='peten'),
+    url(r'^/?reactor/?$', hello.views.reactor, name='reactor'),
 ]

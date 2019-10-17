@@ -26,6 +26,9 @@ STARTING_TEXT="""
 import subprocess
 
 def peten_real(request):
+    return peten(request)
+
+def peten(request):
     if request.method == "POST":
          logging.info(request.POST)
          logging.info(request.POST.keys())
@@ -58,7 +61,7 @@ def peten_real(request):
         context = {"peten_text": STARTING_TEXT, "python_text": "", "output_text": "", "submit_mode": ""}
         return render(request, 'peten.html', context)
 
-def peten(request):
+def fix_mac_slashes(request):
     if request.method == "POST":
          logging.info(request.POST)
          logging.info(request.POST.keys())
@@ -73,6 +76,9 @@ def peten(request):
         return render(request, 'peten.html', context)
 
 # Create your views here.
+def reactor(request):
+    return render(request, 'reactor.html')
+
 def index(request):
     # return HttpResponse('Hello from Python!')
     return render(request, 'index.html')
