@@ -13,7 +13,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 import os,sys
 print(sys.executable)
 print(sys.path)
-import django_heroku
+#import django_heroku
+import django
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -124,4 +125,4 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())

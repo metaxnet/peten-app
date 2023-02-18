@@ -1,0 +1,22 @@
+DEBUG:root:This message should go to the log file
+INFO:root:So should this
+WARNING:root:And this, too
+DEBUG:root:This message should go to the log file
+INFO:root:So should this
+WARNING:root:And this, too
+DEBUG:root:This message should go to the log file
+INFO:root:So should this
+WARNING:root:And this, too
+WARNING:django.request:Not Found: /sipurimpo/A Ghost Story - Mark Twain.html
+DEBUG:root:This message should go to the log file
+INFO:root:So should this
+WARNING:root:And this, too
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['rpnweU44Hz0YQybJLeQ1YpwizdmrrXC20d0pwMXun9Pe1T5cHO958IkkfRdL0EKY'], 'petenText': ['ברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n'], 'pythonText': [''], 'submitMode': ['convert']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'petenText', 'pythonText', 'submitMode'])
+INFO:root:<QueryDict: {'csrfmiddlewaretoken': ['cZM17IRylNPWiG7c9Gfobh7PLtVIxCyvLNpUpAKY1nEct11F5gyslAVRr7M26jGr'], 'petenText': ['ברכה="שלום, עולם!"\r\nלהדפיס(ברכה)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n'], 'pythonText': ['# coding=UTF-8\r\ngreeting="שלום, עולם!"\r\nprint(greeting)\r\n\r\n### PETEN TRANSLATION COMMENTS ###\r\n# ברכה = greeting\r\n'], 'submitMode': ['execute']}>
+INFO:root:dict_keys(['csrfmiddlewaretoken', 'petenText', 'pythonText', 'submitMode'])
+INFO:root:Execute1
+INFO:root:Execute2
+INFO:root:Execute3
+INFO:root:OUT:שלום, עולם!
+
